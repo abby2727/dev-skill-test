@@ -41,14 +41,3 @@ Password: password
 
 Or you can register your own account.
 
-
-## Note
-Create account on PayPal and assign your own key:
-```
-PAYPAL_MODE=sandbox
-PAYPAL_SANDBOX_CLIENT_ID=
-PAYPAL_SANDBOX_CLIENT_SECRET=
-
-PAYPAL_LIVE_CLIENT_ID=
-PAYPAL_LIVE_CLIENT_SECRET=
-```
