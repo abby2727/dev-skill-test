@@ -14,9 +14,9 @@ Setting up your development environment on your local machine:
 git clone https://github.com/abby2727/dev-skill-test.git
 cd dev-skill-test
 composer install
+import the dev_skill_test.sql
 php artisan key:generate
 php artisan optimize
-php artisan db:seed
 php artisan serve
 ```
 ## Before Starting
@@ -26,18 +26,7 @@ Create Database and Set-up db credential on .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=paypal_integration_app
+DB_DATABASE=dev_skill_test
 DB_USERNAME={USERNAME}
 DB_PASSWORD={PASSWORD}
 ```
-
-## Website Login Credentials:
-You may use this credential after runing db:seed (see Installation). 
-
-```
-E-Mail Address: abby@example.com
-Password: password
-```
-
-Or you can register your own account.
-
