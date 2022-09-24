@@ -18,4 +18,11 @@ class PlayerTotalController extends Controller
     {
         return Excel::download(new PlayerTotalExport, 'player-total.csv');
     }
+
+    public function xml()
+    {
+        $players = PlayerTotal::all();
+
+        return response()->xml(['players' => $players->toArray()]);
+    }
 }

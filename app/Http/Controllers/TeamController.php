@@ -18,4 +18,11 @@ class TeamController extends Controller
     {
         return Excel::download(new TeamExport, 'team.csv');
     }
+
+    public function xml()
+    {
+        $team = Team::all();
+
+        return response()->xml(['team' => $team->toArray()]);
+    }
 }

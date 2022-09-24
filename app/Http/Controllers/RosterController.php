@@ -18,4 +18,11 @@ class RosterController extends Controller
     {
         return Excel::download(new RosterExport, 'rosters.csv');
     }
+
+    public function xml()
+    {
+        $roster = Roster::all();
+
+        return response()->xml(['roster' => $roster->toArray()]);
+    }
 }
