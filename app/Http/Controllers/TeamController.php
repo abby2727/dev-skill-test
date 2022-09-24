@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
-use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\TeamExport;
 
 class TeamController extends Controller
 {
@@ -11,5 +12,10 @@ class TeamController extends Controller
     {
         $teams = Team::all();
         return view('team', compact(('teams')));
+    }
+
+    public function export()
+    {
+        return Excel::download(new TeamExport, 'team.csv');
     }
 }

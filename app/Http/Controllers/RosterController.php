@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\RosterExport;
 use App\Models\Roster;
-use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class RosterController extends Controller
 {
@@ -11,5 +12,10 @@ class RosterController extends Controller
     {
         $rosters = Roster::all();
         return view('roster', compact(('rosters')));
+    }
+
+    public function export()
+    {
+        return Excel::download(new RosterExport, 'rosters.csv');
     }
 }

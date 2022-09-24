@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PlayerTotalExport;
 use App\Models\PlayerTotal;
-use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PlayerTotalController extends Controller
 {
@@ -11,5 +12,10 @@ class PlayerTotalController extends Controller
     {
         $players = PlayerTotal::all();
         return view('player', compact(('players')));
+    }
+
+    public function export()
+    {
+        return Excel::download(new PlayerTotalExport, 'player-total.csv');
     }
 }
