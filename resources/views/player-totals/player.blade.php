@@ -4,8 +4,9 @@
     <div class="container mt-4">
 
         <h2 class="text-dark">Player Total</h2>
-        <a href="{{ route('player.export') }}" class="btn btn-success mb-4 mx-2">CSV Export</a>
-        <a href="{{ route('player.xml') }}" target="_blank" class="btn btn-dark float-end">XML</a>
+        <a href="{{ route('player.json') }}" target="_blank" class="btn btn-dark float-end">JSON format</a>
+        <a href="{{ route('player.xml') }}" target="_blank" class="btn btn-warning float-end mx-2">XML</a>
+        <a href="{{ route('player.export') }}" class="btn btn-success mb-4">CSV Export</a>
 
         <table id="myDataTable" class="table table-bordered table-striped" style="width: 100%;">
             <thead>

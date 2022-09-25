@@ -11,14 +11,16 @@ class PlayerTotalController extends Controller
     public function index()
     {
         $players = PlayerTotal::all();
-        return view('player', compact(('players')));
+
+        return view('player-totals.player', compact(('players')));
     }
 
     public function show($player_id)
     {
         $players = PlayerTotal::find($player_id);
         // dd($players);
-        return view('show-player', compact(('players')));
+
+        return view('player-totals.show-player', compact(('players')));
     }
 
     public function export()
@@ -31,5 +33,12 @@ class PlayerTotalController extends Controller
         $players = PlayerTotal::all();
 
         return response()->xml(['players' => $players->toArray()]);
+    }
+
+    public function json()
+    {
+        $players = PlayerTotal::all()->toJson();
+
+        return $players;
     }
 }

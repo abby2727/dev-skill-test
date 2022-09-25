@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Specific Player Statistics</h4>
+                        <h4>Specific Player Statistics
+                            <a href="{{ route('player.index') }}" class="btn btn-danger float-end">Back</a>
+                        </h4>
                     </div>
                     <div class="card-body text-center">
                         <p><span class="text-muted">Player Name:</span> {{ $players->roster->name }}</p>

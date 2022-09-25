@@ -6,8 +6,9 @@
         <div class="card">
             <div class="card-header">
                 <h4>Team
-                    <a href="{{ route('team.export') }}" class="btn btn-success float-end mx-2">CSV Export</a>
-                    <a href="{{ route('team.xml') }}" target="_blank" class="btn btn-dark float-end">XML</a>
+                    <a href="{{ route('team.json') }}" target="_blank" class="btn btn-dark float-end">JSON format</a>
+                    <a href="{{ route('team.xml') }}" target="_blank" class="btn btn-warning float-end mx-2">XML</a>
+                    <a href="{{ route('team.export') }}" class="btn btn-success float-end">CSV Export</a>
                 </h4>
             </div>
             <div class="card-body">

@@ -11,7 +11,8 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::all();
-        return view('team', compact(('teams')));
+
+        return view('team.team', compact(('teams')));
     }
 
     public function export()
@@ -24,5 +25,12 @@ class TeamController extends Controller
         $team = Team::all();
 
         return response()->xml(['team' => $team->toArray()]);
+    }
+
+    public function json()
+    {
+        $teams = Team::all()->toJson();
+
+        return $teams;
     }
 }

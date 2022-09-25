@@ -11,15 +11,17 @@ class RosterController extends Controller
     public function index()
     {
         $rosters = Roster::all();
+        // dd($rosters);
 
-        return view('roster', compact(('rosters')));
+        return view('rosters.roster', compact(('rosters')));
     }
 
     public function show($id)
     {
         $rosters = Roster::find($id);
         // dd($rosters);
-        return view('show-roster', compact(('rosters')));
+
+        return view('rosters.show-roster', compact(('rosters')));
     }
 
     public function export()
@@ -32,5 +34,12 @@ class RosterController extends Controller
         $roster = Roster::all();
 
         return response()->xml(['roster' => $roster->toArray()]);
+    }
+
+    public function json()
+    {
+        $roster = Roster::all()->toJson();
+
+        return $roster;
     }
 }

@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Player Information</h4>
+                        <h4>Player Information
+                            <a href="{{ route('roster.index') }}" class="btn btn-danger float-end">Back</a>
+                        </h4>
                     </div>
                     <div class="card-body text-center">
                         <p>Team: <strong>{{ $rosters->team_code }}</strong></p>
