@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    @include('layouts/inc/admin-navbar')
+    @include('layouts/inc/navbar')
 
     <main>
         @yield('content')

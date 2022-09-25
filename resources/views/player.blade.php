@@ -10,6 +10,7 @@
         <table id="myDataTable" class="table table-bordered table-striped" style="width: 100%;">
             <thead>
                 <tr>
+                    <th>Name</th>
                     <th>Age</th>
                     <th>Games</th>
                     <th>Games Started</th>
@@ -34,6 +35,10 @@
             <tbody>
                 @foreach ($players as $player)
                     <tr>
+                        <td>
+                            <a style="text-decoration: none;"
+                                href="{{ route('player.show', $player->player_id) }}">{{ $player->roster->name }}</a>
+                        </td>
                         <td>{{ $player->age }}</td>
                         <td>{{ $player->games }}</td>
                         <td>{{ $player->games_started }}</td>

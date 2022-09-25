@@ -11,6 +11,8 @@ class Roster extends Model
 
     protected $table = 'roster';
 
+    public $incrementing = false;
+
     // From the database 'comlumn table'
     protected $fillable = [
         'team_code',

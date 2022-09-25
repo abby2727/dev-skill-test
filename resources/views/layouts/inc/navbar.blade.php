@@ -7,15 +7,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" 
-                        href="{{ route('team.index') }}">Team</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('team.index') }}">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('rosters') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::is('rosters') ? 'active' : '' }} || {{ Request::is('rosters/*') ? 'active' : '' }}"
                         href="{{ route('roster.index') }}">Roster</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('players') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::is('players') ? 'active' : '' }} || {{ Request::is('players/*') ? 'active' : '' }}"
                         href="{{ route('player.index') }}">Player Total</a>
                 </li>
             </ul>

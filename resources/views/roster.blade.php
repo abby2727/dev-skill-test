@@ -30,7 +30,10 @@
                             <tr>
                                 <td>{{ $roster->team_code }}</td>
                                 <td>{{ $roster->number }}</td>
-                                <td>{{ $roster->name }}</td>
+                                <td>
+                                    <a style="text-decoration: none;"
+                                        href="{{ route('roster.show', $roster->id) }}">{{ $roster->name }}</a>
+                                </td>
                                 <td>{{ $roster->pos }}</td>
                                 <td>{{ $roster->height }}</td>
                                 <td>{{ $roster->weight }}</td>

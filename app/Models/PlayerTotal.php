@@ -11,8 +11,13 @@ class PlayerTotal extends Model
 
     protected $table = 'player_totals';
 
+    public $incrementing = false;
+
+    protected $primaryKey = 'player_id';
+
     // From the database 'comlumn table'
     protected $fillable = [
+        'player_id',
         'age',
         'games',
         'games_started',
@@ -33,4 +38,9 @@ class PlayerTotal extends Model
         'turnovers',
         'personal_fouls',
     ];
+
+    public function roster()
+    {
+        return $this->belongsTo(Roster::class, 'player_id');
+    }
 }

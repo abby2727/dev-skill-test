@@ -14,6 +14,13 @@ class PlayerTotalController extends Controller
         return view('player', compact(('players')));
     }
 
+    public function show($player_id)
+    {
+        $players = PlayerTotal::find($player_id);
+        // dd($players);
+        return view('show-player', compact(('players')));
+    }
+
     public function export()
     {
         return Excel::download(new PlayerTotalExport, 'player-total.csv');

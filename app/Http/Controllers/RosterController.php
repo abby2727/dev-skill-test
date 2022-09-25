@@ -11,7 +11,15 @@ class RosterController extends Controller
     public function index()
     {
         $rosters = Roster::all();
+
         return view('roster', compact(('rosters')));
+    }
+
+    public function show($id)
+    {
+        $rosters = Roster::find($id);
+        // dd($rosters);
+        return view('show-roster', compact(('rosters')));
     }
 
     public function export()
