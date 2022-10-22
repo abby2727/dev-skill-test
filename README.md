@@ -13,6 +13,7 @@ Setting up your development environment on your local machine:
 ```
 git clone https://github.com/abby2727/dev-skill-test.git
 cd dev-skill-test
+cp .env.example .env
 composer install
 import the dev_skill_test.sql
 php artisan key:generate
