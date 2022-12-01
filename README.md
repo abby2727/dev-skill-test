@@ -1,6 +1,6 @@
-<h1 align="center">Fullstack Coding Test</h1>
+<h1 align="center">Fullstack Coding Skill Test</h1>
 
-<p align="justify">NBA 2019 Record.</p>
+<p align="justify">NBA 2019 Record. XML, CSV, and PDF export.</p>
 •   Author: <a href="https://abby2727.github.io/my-portfolio/"> Abdul Pangandaman </a> <br>
 •   Twitter: <a href="https://twitter.com/abby_2727"> @abby_2727 </a> <br>
 •   Instagram: <a href="https://www.instagram.com/abbyyyyys_/"> @abbyyyyys_ </a> <br>
